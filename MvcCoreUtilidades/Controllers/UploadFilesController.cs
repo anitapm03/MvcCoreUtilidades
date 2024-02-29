@@ -10,13 +10,11 @@ namespace MvcCoreUtilidades.Controllers
     {
 
         private HelperPathProvider helperPathProvider;
-        private IServer server;
+        
 
-        public UploadFilesController(HelperPathProvider helperPathProvider, 
-            IServer server)
+        public UploadFilesController(HelperPathProvider helperPathProvider)
         {
             this.helperPathProvider = helperPathProvider;
-            this.server = server;
         }
 
         public async Task<IActionResult> SubirFichero()
