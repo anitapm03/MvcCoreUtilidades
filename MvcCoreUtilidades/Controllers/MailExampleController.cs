@@ -28,9 +28,7 @@ namespace MvcCoreUtilidades.Controllers
         public async Task<IActionResult> SendMail
             (string para, string asunto, string mensaje, IFormFile fichero)
         {
-            string msg = "";
-            string folder;
-
+            
             if (fichero != null)
             {
                 string path = await this.uploadFiles.UploadFileAsync(fichero, Folders.Mails);
@@ -40,7 +38,7 @@ namespace MvcCoreUtilidades.Controllers
                 await this.helperMails.SendMailAsync(para, asunto, mensaje);
             }
             
-            ViewData["MENSAJE"] = msg;
+            ViewData["MENSAJE"] = "Enviado!";
 
             return View();
         }
