@@ -1,0 +1,26 @@
+﻿<h1>Memoria personalizada</h1>
+
+
+<a asp-controller="Caching"
+   asp-action="MemoriaPersonalizada"
+    class="btn btn-danger">
+   Actualizar</a>
+
+<a asp-controller="Caching"
+   asp-action="MemoriaPersonalizada"
+   asp-route-tiempo="15"
+   class="btn btn-danger">
+    Actualizar 15 seg
+</a>
+
+<a asp-controller="Caching"
+   asp-action="MemoriaPersonalizada"
+   asp-route-tiempo="30"
+   class="btn btn-danger">
+    Actualizar 30 seg
+</a>
+
+<h2>@ViewData["MENSAJE"]</h2>
+
+<h2 style="color:purple">
+    @ViewData["FECHA"]</h2>
